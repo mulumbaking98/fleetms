@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout">
+
+<body>
+<div layout:fragment="content">
+
+    <div id="full_wrapper">
+        <div id="baseUrl" data-base-url='<%=request.getContextPath()%>'></div>
+
+        <div id="bg_color_strip" class="col-sm-5"></div>
+        <%@ include file="../layout/header.jsp" %>
+        <div class="container-full">
+            <div class="main_fullContainer">
+                <div class="row">
+                    <div class="col-sm-5 col-md-4 col-centered">
+                        <div class="main_leftCol">
+                            <!--START _sidebar-home.html -->
+                            <%@ include file="../layout/adminSideBar.jsp" %>
+                            <!--END _sidebar-home.html -->
+                        </div>
+                    </div>
+                    <div class="col-sm-7 col-md-8 blue-banner">
+                        <div class="main_rightCol">
+                            <div class="container-full" >
+                                <h1 id="hMainTitle">Add Patient</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-7 col-md-8 main-content" style="margin-left: 2px;margin-right: -2px;background-color:#4fc3f7; padding: 0;">
+                        <div class="main_rightCol" style="max-width: 950px; min-height: 100vh;">
+                            <div id="patientSearchComponent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End full profile Welcome Modal -->
+
+
+</div>
+
+</body>
+</html>
+
+
